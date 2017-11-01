@@ -1,0 +1,16 @@
+---
+title: Rmarkdown and Hugo short codes
+author: Zachary T. Harmany
+date: '2017-10-29'
+slug: rmarkdown-and-hugo-short-codes
+categories:
+  - metablogging
+tags: []
+# draft: true
+---
+
+Note that in Rmarkdown files in blogdown, one must use the `blogdown::shortcode` function. The following example is given in the Blogdown documentation:
+
+```{r echo=TRUE}
+blogdown::shortcode('tweet', '852205086956818432')
+```

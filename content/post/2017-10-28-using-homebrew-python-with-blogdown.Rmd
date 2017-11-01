@@ -1,0 +1,24 @@
+---
+title: Using Homebrew Python with Blogdown
+author: Zachary T. Harmany
+date: '2017-10-28'
+slug: using-homebrew-python-with-blogdown
+categories:
+  - metablogging
+tags: []
+---
+
+By default, Blogdown uses the system Python installation. To tell Blogdown to use a different version of Python, e.g., Python 3 installed via Homebrew, one needs to configure a different engine in Knitr:
+
+```r
+knitr::opts_chunk$set(engine.path = list(python = '/usr/local/bin/python3'))
+```
+
+I include this line in my `~/.Rprofile`. Now you can test to ensure that it is using the specified version of Python:
+
+```{python}
+import sys
+print(sys.version)
+print(sys.executable)
+```
+
