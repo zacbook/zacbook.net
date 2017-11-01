@@ -1,10 +1,7 @@
-# Tranquilpeak
-# Version : 0.4.1-BETA
-# Author : Thibaud Leprêtre
+# ZacBook.net
+# Zac Harmany
 
-# I STRONGLY recommend you to use a CDN to speed up loading of pages.
-# There is many free CDN like Cloudinary or you can also use indirectly
-# by using services like Google Photos.
+# The theme is based on Tranquilpeak by Thibaud Leprêtre.
 
 # If you want to store images yourself, please read this guidelines:
 # For users, if you only use this theme, put your images directly in `source/assets/images` folder
@@ -15,7 +12,7 @@
 baseurl = "https://zacbook.net"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Hugo tranquilpeak theme"
+title = "ZacBook.net"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
 # googleAnalytics = "UA-123-45"
@@ -32,10 +29,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   archive = "archives"
 
 [author]
-  name = "Firstname Lastname"
-  bio = "Super bio with markdown support **COOL**"
-  job = "Your job title"
-  location = "France"
+  name = "Zac Harmany"
+  bio = ""
+  job = ""
+  location = "Sacramento, CA"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
