@@ -1,0 +1,95 @@
+---
+title: Reverting in Homebrew
+author: Zachary T. Harmany
+date: '2017-11-02'
+slug: reverting-in-homebrew
+categories: 
+  - metablogging
+tags:
+  - homebrew
+  - pandoc
+  - blogdown
+---
+
+Occasionally, I like to grab the latest versions of various Homebrew packages. As I discovered today, the danger in doing this is breaking something that was working. It seems that after upgrading `pandoc` in Homebrew, it seems that it broke my Blogdown rendering process. Pandoc 2.0.1 was released on October 31, 2017. Unbeknownst to me, pandoc 2.0 made changes to the API that Blogdown has not yet incorporated. So today on November 2, I'm left with a broken blog rendering workflow. 
+
+To remedy this, I thought the quickest way would be to revert or downgrade to a previous version of pandoc in Homebrew. I believe one could, alternately, create a custom `_output.yml` that corrects the Pandoc options, but being a relative neophite to Blogdown, I chose to avoid digging through the docs to understand how to set these correctly.
+
+I had to do some searching on how to revert or downgrade to previous versions in Homebrew. After fiddling with various `brew` commands, I came across this [Stack Overflow post](//stackoverflow.com/a/46306176/8734869) by Adrian. His solution was to examine the Homebrew git repository more directly. Following his instructions, I was able to successfully uninstall (technically unlink) pandoc 2.0.1 and install pandoc 1.19.2.4. This version of pandoc played nicely with Blogdown. This summarizes the steps I took.
+
+1. This may be optional, but it seems that by default Homebrew does a shallow clone of the repository, so I grabbed the whole thing:
+    ```bash
+    git -C "$(brew --repo homebrew/core)" fetch --unshallow
+    ```
+    Terminal output:
+    ```plain
+    remote: Counting objects: 365198, done.
+    remote: Compressing objects: 100% (148855/148855), done.
+    remote: Total 365198 (delta 217412), reused 361313 (delta 213538), pack-reused 0
+    Receiving objects: 100% (365198/365198), 114.32 MiB | 878.00 KiB/s, done.
+    Resolving deltas: 100% (217412/217412), completed with 3699 local objects.
+    ```
+
+2. Then I searched the commit logs for the commit just prior to version 2.0:
+    ```bash
+    cd "$(brew --repo homebrew/core)"
+    git log master -- Formula/pandoc.rb
+    ```
+    Here's the log of the commit I selected:
+    ```text
+    commit 16ebe5f1843e6cb54856311ff0f676be53007329
+    Author: ilovezfs <ilovezfs@icloud.com>
+    Date:   Wed Oct 18 03:10:48 2017 -0700
+  
+      Use “squiggly” heredocs.
+    ```
+    Copy the commit hash (the `16ebe5f1843e6cb54856311ff0f676be53007329`) for the next step.
+    
+4. Unlink the installed version of pandoc:
+    ```bash
+    brew unlink pandoc
+    ```
+    Terminal output:
+    ```text
+    Unlinking /usr/local/Cellar/pandoc/2.0.1... 5 symlinks removed
+    ```
+    
+5. Install the version of pandoc associated with the checked out commit and verify:
+    ```bash
+    HOMEBREW_NO_AUTO_UPDATE=1 brew install pandoc; pandoc --version
+    ```
+    Terminal output:
+    ```text
+    ==> Downloading https://homebrew.bintray.com/bottles/pandoc-1.19.2.4.sierra.bottle.tar.gz
+    ######################################################################## 100.0%
+    ==> Pouring pandoc-1.19.2.4.sierra.bottle.tar.gz
+    ==> Caveats
+    Bash completion has been installed to:
+      /usr/local/etc/bash_completion.d
+    ==> Summary
+    🍺  /usr/local/Cellar/pandoc/1.19.2.4: 72 files, 86.1MB
+    pandoc 1.19.2.4
+    Compiled with pandoc-types 1.17.0.5, texmath 0.9.4.1, skylighting 0.1.1.5
+    Default user data directory: /Users/zac/.pandoc
+    Copyright (C) 2006-2016 John MacFarlane
+    Web:  http://pandoc.org
+    This is free software; see the source for copying conditions.
+    There is no warranty, not even for merchantability or fitness
+    for a particular purpose.
+    ```
+
+## Final note
+
+As I noted earlier, none of the above steps *removes* pandoc 2.0.1. See:
+```bash
+ls -la /usr/local/Cellar/pandoc
+```
+Terminal output:
+```text
+total 0
+drwxr-xr-x   4 zac  admin   136 Nov  2 10:23 .
+drwxrwxr-x  53 zac  admin  1802 Nov  1 18:32 ..
+drwxr-xr-x  11 zac  admin   374 Nov  2 10:23 1.19.2.4
+drwxr-xr-x  12 zac  admin   408 Nov  2 10:09 2.0.1
+```
+This is a feature, not a bug. If it turns out that pandoc 2.0.1 is requried elsewhere, one can use `brew switch pandoc 2.0.1` to have Homebrew link to 2.0.1, then `brew switch pandoc 1.19.2.4` to switch back.

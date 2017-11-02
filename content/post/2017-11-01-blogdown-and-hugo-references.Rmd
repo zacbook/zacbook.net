@@ -1,0 +1,16 @@
+---
+title: Blogdown and Hugo references
+author: Zachary T. Harmany
+date: '2017-11-01'
+slug: blogdown-and-hugo-references
+categories:
+  - metablogging
+tags: []
+---
+
+This is a simple list of references for Blogdown and Hugo.
+
+- [Hugo Documentation](//gohugo.io/documentation/)
+- [blogdown: Creating Websites with R Markdown](//bookdown.org/yihui/blogdown/) by Yihui Xie, Amber Thomas, Alison Presmanes Hill
+- [Integrating Blogdown with GitHub Pages and Travis-CI](//wjakethompson.github.io/post/blogdown-gh-pages-travis-ci/) by Jake Thompson. This is not how I currently deploy this blog, but am keeping it for potential future reference. It's also a great example of the use of the [Academic theme](//themes.gohugo.io/academic/).
+
