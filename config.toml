@@ -14,7 +14,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "ZacBook.net"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "hugo-tranquilpeak-theme"
+disqusShortname = "zacbook"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
@@ -112,7 +112,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "Hugo tranquilpeak theme demo"
+  description = "ZacBook.net, a blog by Zac Harmany."
 
   # Customization
   # Define the behavior of the sidebar
