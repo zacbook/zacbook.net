@@ -1,0 +1,34 @@
+---
+title: What the Git? (in Blogdown)
+author: Zachary T. Harmany
+date: '2017-11-01'
+categories:
+  - metablogging
+tags:
+  - blogdown
+  - git
+slug: what-the-git-in-blogdown
+---
+
+
+
+<p>Being a fan of version control, and perhaps Git in particular, I naturally keep the source to my website in a <a href="//github.com/zacbook/zacbook.net">Git repository</a>. However, starting out with Blogdown and Hugo, I wasn’t sure what <em>exactly</em> should be stored in Git versus relying on the generated output of Blogdown or Hugo. The solution actually depended on the particular way in which I deploy my site. Here’s what worked for me when deploying via <a href="//netlify.com/">Netlify</a>.</p>
+<div id="what-absolutly-shouldnt-be-in-your-repository" class="section level2">
+<h2>What <em>absolutly</em> shouldn’t be in your repository</h2>
+<ul>
+<li><code>/public</code> - In principle, this entire directory is can be regenerated from the remainder of your source. As such, it does not belong in your Git repo.</li>
+</ul>
+</div>
+<div id="what-absolutly-should-be-in-your-repository" class="section level2">
+<h2>What <em>absolutly</em> should be in your repository</h2>
+<ul>
+<li><code>/content</code> - Keeping your content version controlled is key!</li>
+</ul>
+</div>
+<div id="what-i-also-include-in-my-repository" class="section level2">
+<h2>What I also include in my repository</h2>
+<ul>
+<li><p><code>/static</code> - Including <code>/static/post</code>, which is technically generated via Blogdown.</p>
+<p>If you create any plots or graphs in R (or, with a bit more complexity, Python), the resulting image files are stored here. In principle, they should <em>not</em> be under version control. However, they are needed by Hugo (when Blogdown runs the <code>hugo</code> command) or else they will not appear in <code>/public</code>. Since I am deploying via Netlify’s continuous integration pointed at my Github repo - which simply runs <code>hugo</code> on my source - these files need to be in the repository for <code>hugo</code> to find so that they can be served on Netlify. If, in the future, Netlify offers native Blogdown support, all of these files can and should be removed from the repository. Asking for native Blogdown support may be a tall order, since it depends on having R installed, and if you’re using other engines (e.g., Python, Ruby) in Rmarkdown, those engines as well. Additionally, you would be asking Netlify’s servers to power any of your calculations for more intensive code!</p></li>
+</ul>
+</div>

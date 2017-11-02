@@ -25,6 +25,7 @@ rprojroot::find_rstudio_root_file() # will return the root of the project
 # (ROOT)/(current work directory, removing project root, replace 'content' with 'static')/filename/
 # Could also, perhaps, simply replace 'content' with 'static' in current work directory?
 # although it seems that blogdown does not make subdirectories within 'static' to put images from rcode, so perhaps need to simplify to projectroot/static/filename ?
+# The above statement is incorrect - blogdown does create subdirectories within static. The version that was not in a subdirectory was an old version!
 ```
 
 For example:
