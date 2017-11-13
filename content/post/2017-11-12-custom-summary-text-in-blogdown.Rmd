@@ -1,0 +1,34 @@
+---
+title: Custom summary text in Blogdown
+author: Zachary T. Harmany
+date: '2017-11-12'
+slug: custom-summary-text-in-blogdown
+categories:
+  - metablogging
+tags:
+  - blogdown
+  - Hugo
+summary: >
+  This post has custom summary text that displays on the homepage.
+  It is *not* actually present in the beginning of the post. The 
+  rest of the post explains how I did this.
+---
+
+By default, Hugo seems to [summarize posts by taking the first 70 words](https://gohugo.io/content-management/summaries/). One can explicitly set the 'fold' by inserting `<!--more-->` in the post's Markdown file. However, this does not seem to work with Rmarkdown files in Blogdown. It seems that since Blogdown processes the files into an intermediate HTML form prior to feeding them to Hugo. Because of this, `<!--more-->` winds up being carried along as an HTML comment versus splitting the Hugo summary. 
+
+To circumvent this limitation, I modified the Tranquilpeak theme to read in a per-post parameter `.Params.Summary` (provided it exists) versus using Hugo's `.Summary` function. The explicit change was to modify `layouts/_default/summary.html` by replacing `{{ . Summary }}` with
+```html
+{{ if .Params.Summary }}
+  {{ .Params.Summary | markdownify }}
+{{ else }}
+  {{ .Summary }}
+{{ end }}
+```
+I then created the summary for this post by including these lines in the YAML front matter:
+```text
+summary: >
+  This post has custom summary text that displays on the homepage.
+  It is *not* actually present in the beginning of the post. The 
+  rest of the post explains how I did this.
+```
+The handy pipe to markdownify allows for Markdown in the summary to be processed.
