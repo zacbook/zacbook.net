@@ -14,6 +14,14 @@ summary: >
   rest of the post explains how I did this.
 ---
 
+```{r echo=FALSE}
+blogdown::shortcode("alert warning")
+```
+Update: This feature is now an [official feature of the Tranquilpeak Theme](https://github.com/kakawait/hugo-tranquilpeak-theme/pull/233)!
+```{r echo=FALSE}
+blogdown::shortcode("/alert")
+```
+
 By default, Hugo seems to [summarize posts by taking the first 70 words](https://gohugo.io/content-management/summaries/). One can explicitly set the 'fold' by inserting `<!--more-->` in the post's Markdown file. However, this does not seem to work with Rmarkdown files in Blogdown. It seems that since Blogdown processes the files into an intermediate HTML form prior to feeding them to Hugo. Because of this, `<!--more-->` winds up being carried along as an HTML comment versus splitting the Hugo summary. 
 
 To circumvent this limitation, I modified the Tranquilpeak theme to read in a per-post parameter `.Params.Summary` (provided it exists) versus using Hugo's `.Summary` function. The explicit change was to modify `layouts/_default/summary.html` by replacing `{{ . Summary }}` with
