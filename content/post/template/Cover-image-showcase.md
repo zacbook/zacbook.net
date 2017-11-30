@@ -1,6 +1,6 @@
 ---
 title: "Cover image showcase"
-thumbnailImagePosition: left
+thumbnailImagePosition: bottom
 thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
 coverImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
 metaAlignment: center

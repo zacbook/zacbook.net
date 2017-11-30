@@ -1,0 +1,26 @@
+---
+title: 'Metablogging: Cover Image'
+author: Zachary T. Harmany
+date: '2017-11-21'
+slug: metablogging-cover-image
+categories:
+  - metablogging
+tags: []
+summary: "This is a demonstration of the cover image feature."
+thumbnailImagePosition: left
+thumbnailImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg
+coverImage: //d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg
+metaAlignment: center
+coverMeta: out
+coverSize: full
+---
+
+This is a demonstration of the cover image feature.
+
+The important frontmatter variables used are:
+
+- `coverImage`: URL to the cover image. This can be an absolute URL, or relative to the base URL, e.g., `/img/coverimage.png`.
+- `thumbnailImage`: URL to the thumbnail image to be shown on the list of articles.
+- `thumbnailImagePosition`: Placement of the thumbnail relative to the title of the post. Note that the `bottom` option seems different than documented. The thumbnail appears below the summary and "continue reading" link, not immediately after the title as shown in the `user.md` docs. I believe I fixed this in my `develop-zacbook` branch.
+- `metaAlignment`: Placement of the title, date, and categories on the post page. Since the coverImage is centered, it may be preferable to center the title.
+- `coverMeta`: Placement of the title, date, and categories with respect to the cover image. Should they be placed inside or outside the cover image? If the image is the focus, this should be set to `out`. Otherwise, if a large announcement is intended with the cover image being secondary, `in` may be preferred.
