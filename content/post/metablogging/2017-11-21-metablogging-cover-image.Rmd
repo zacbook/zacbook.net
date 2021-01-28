@@ -1,5 +1,5 @@
 ---
-title: 'Metablogging: Cover Image'
+title: 'Metablogging: Cover Image Demo'
 author: Zachary T. Harmany
 date: '2017-11-21'
 slug: metablogging-cover-image
