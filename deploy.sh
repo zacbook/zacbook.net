@@ -2,7 +2,7 @@
 rm -rf ./public
 rscript -e "blogdown::build_site()"
 cd ./public
-git init .
+git init -b 'master' .
 git add .
 git config user.name "Zac Harmany"
 git config user.email "zac@zacbook.net"
