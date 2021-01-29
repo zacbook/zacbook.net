@@ -8,5 +8,10 @@ install.packages('rmarkdown')
 install.packages('knitr')
 # Install Blogdown
 install.packages("blogdown")
+# Install Reticulate
+# From an error: The 'python' engine in knitr requires the reticulate package.
+install.packages('reticulate')
+# Install rprojroot
+install.packages('rprojroot')
 # Install Hugo
 blogdown::install_hugo()
