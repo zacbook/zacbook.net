@@ -20,11 +20,11 @@ blogdown::shortcode("/alert")
 
 Being a fan of version control, and perhaps Git in particular, I naturally keep the source to my website in a [Git repository](//github.com/zacbook/zacbook.net). However, starting out with Blogdown and Hugo, I wasn't sure what *exactly* should be stored in Git versus relying on the generated output of Blogdown or Hugo. The solution actually depended on the particular way in which I deploy my site. Here's what worked for me when deploying via [Netlify](//netlify.com/).
 
-## What *absolutly* shouldn't be in your repository
+## What *absolutely* shouldn't be in your repository
 
 - `/public` - In principle, this entire directory is can be regenerated from the remainder of your source. As such, it does not belong in your Git repo.
 
-## What *absolutly* should be in your repository
+## What *absolutely* should be in your repository
 
 - `/content` - Keeping your content version controlled is key!
 
