@@ -1,5 +1,6 @@
 #!/bin/bash
 rm -rf ./public
+mkdir ./public
 rscript -e "blogdown::build_site()"
 cd ./public
 git init -b 'master' .
