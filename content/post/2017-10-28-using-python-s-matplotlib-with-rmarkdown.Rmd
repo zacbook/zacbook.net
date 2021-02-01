@@ -12,7 +12,6 @@ One way to include Matplotlib plots in Rmarkdown files within Blogdown is to sav
 
 ```{bash}
 pwd
-printenv
 mkdir -p ../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files
 # The p flag will create the directory (and intermediate subdirectories) if it doesn't exist, otherwise will do nothing
 ```
