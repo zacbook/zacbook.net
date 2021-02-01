@@ -13,7 +13,7 @@ One way to include Matplotlib plots in Rmarkdown files within Blogdown is to sav
 ```{bash}
 pwd
 printenv
-mkdir -p ../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown
+mkdir -p ../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files
 # The p flag will create the directory (and intermediate subdirectories) if it doesn't exist, otherwise will do nothing
 ```
 
@@ -40,13 +40,13 @@ fig, ax = plt.subplots( nrows=1, ncols=1 )
 ax.plot (X, Y+1, color='blue', alpha=1.00)
 ax.plot (X, Y-1, color='blue', alpha=1.00)
 # plt.show() # Optionally show plot
-fig.savefig('../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown/foo.png', bbox_inches='tight')
+fig.savefig('../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files/foo.png', bbox_inches='tight')
 ```
 
 Then using 
 
 ```markdown
-![A wavy plot.](/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown/foo.png)
+![A wavy plot.](/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files/foo.png)
 ```
 
 the plot will be included in the post. Note that the subdirectory `2017-10-28-using-python-s-matplotlib-with-rmarkdown` needed to be created by hand. Knitr will not create these automatically as is done with plots generated from R code.
