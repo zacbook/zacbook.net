@@ -1,6 +1,8 @@
 #!/bin/bash
 rm -rf ./public
 mkdir ./public
+# To ALWAYS rebuild the .Rmd to .html files, use the build_rmd=TRUE flag
+# rscript -e "blogdown::build_site(build_rmd=TRUE)"
 rscript -e "blogdown::build_site()"
 cd ./public
 git init -b 'master' .
