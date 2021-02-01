@@ -53,6 +53,6 @@ the plot will be included in the post. Note that the subdirectory `2017-10-28-us
 
 Output image: 
 
-![A wavy plot.](/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown/foo.png)
+![A wavy plot.](/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files/foo.png)
 
 This method does have limitations, such as breaking the inline previews in Rstudio, since they are expected to be in the same directory as the `*.Rmd` file.
