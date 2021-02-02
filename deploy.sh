@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 rm -rf ./public
 mkdir ./public
 # To ALWAYS rebuild the .Rmd to .html files, use the build_rmd=TRUE flag
