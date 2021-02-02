@@ -3,7 +3,7 @@ options(
     blogdown.author='Zac Harmany',
     blogdown.ext='.Rmd',
     blogdown.subdir='post',
-    blogdown.yaml.empty='TRUE',
+    blogdown.yaml.empty=TRUE,
     servr.daemon=interactive()
 )
 # Rprofile needs a trailing newline
