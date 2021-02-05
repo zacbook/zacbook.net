@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on ZacBook.net</title>
+    <link>https://zacbook.net/tags/hugo/</link>
+    <description>Recent content in Hugo on ZacBook.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://zacbook.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom summary text in Blogdown</title>
+      <link>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</guid>
+      <description>This post has custom summary text that displays on the homepage. It is &lt;em&gt;not&lt;/em&gt; actually present in the beginning of the post. The  rest of the post explains how I did this.</description>
+    </item>
+    
+  </channel>
+</rss>

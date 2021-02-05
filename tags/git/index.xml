@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on ZacBook.net</title>
+    <link>https://zacbook.net/tags/git/</link>
+    <description>Recent content in git on ZacBook.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://zacbook.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What the Git? (in Blogdown)</title>
+      <link>https://zacbook.net/2017/11/what-the-git-in-blogdown/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/what-the-git-in-blogdown/</guid>
+      <description>This post no longer reflects my current practice. I’ve switched to deploying from a separate branch that contains the rendered html. As such, I now ignore the html files within /contentand no longer include generated content within /static.
+
+Being a fan of version control, and perhaps Git in particular, I naturally keep the source to my website in a Git repository. However, starting out with Blogdown and Hugo, I wasn’t sure what exactly should be stored in Git versus relying on the generated output of Blogdown or Hugo.</description>
+    </item>
+    
+  </channel>
+</rss>

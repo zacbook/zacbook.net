@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blogdown on ZacBook.net</title>
+    <link>https://zacbook.net/tags/blogdown/</link>
+    <description>Recent content in blogdown on ZacBook.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://zacbook.net/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom summary text in Blogdown</title>
+      <link>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</guid>
+      <description>This post has custom summary text that displays on the homepage. It is &lt;em&gt;not&lt;/em&gt; actually present in the beginning of the post. The  rest of the post explains how I did this.</description>
+    </item>
+    
+    <item>
+      <title>Reverting in Homebrew</title>
+      <link>https://zacbook.net/2017/11/reverting-in-homebrew/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/reverting-in-homebrew/</guid>
+      <description>Occasionally, I like to grab the latest versions of various Homebrew packages. As I discovered today, the danger in doing this is breaking something that was working. It seems that after upgrading pandoc in Homebrew, it seems that it broke my Blogdown rendering process. Pandoc 2.0.1 was released on October 31, 2017. Unbeknownst to me, pandoc 2.0 made changes to the API that Blogdown has not yet incorporated. So today on November 2, I’m left with a broken blog rendering workflow.</description>
+    </item>
+    
+    <item>
+      <title>What the Git? (in Blogdown)</title>
+      <link>https://zacbook.net/2017/11/what-the-git-in-blogdown/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/what-the-git-in-blogdown/</guid>
+      <description>This post no longer reflects my current practice. I’ve switched to deploying from a separate branch that contains the rendered html. As such, I now ignore the html files within /contentand no longer include generated content within /static.
+
+Being a fan of version control, and perhaps Git in particular, I naturally keep the source to my website in a Git repository. However, starting out with Blogdown and Hugo, I wasn’t sure what exactly should be stored in Git versus relying on the generated output of Blogdown or Hugo.</description>
+    </item>
+    
+  </channel>
+</rss>
