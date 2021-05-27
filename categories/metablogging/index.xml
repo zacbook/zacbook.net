@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>metablogging on ZacBook.net</title>
+    <link>https://zacbook.net/categories/metablogging/</link>
+    <description>Recent content in metablogging on ZacBook.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zacbook.net/categories/metablogging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resurrection</title>
+      <link>https://zacbook.net/2021/02/index.en-us/</link>
+      <pubDate>Sat, 06 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2021/02/index.en-us/</guid>
+      <description>
+&lt;script src=&#34;https://zacbook.net/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;I’m back.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Metablogging: Cover Image Demo</title>
+      <link>https://zacbook.net/2017/11/metablogging-cover-image/</link>
+      <pubDate>Tue, 21 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/metablogging-cover-image/</guid>
+      <description>This is a demonstration of the cover image feature.</description>
+    </item>
+    
+    <item>
+      <title>Custom summary text in Blogdown</title>
+      <link>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</link>
+      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/custom-summary-text-in-blogdown/</guid>
+      <description>This post has custom summary text that displays on the homepage. It is &lt;em&gt;not&lt;/em&gt; actually present in the beginning of the post. The  rest of the post explains how I did this.</description>
+    </item>
+    
+    <item>
+      <title>Reverting in Homebrew</title>
+      <link>https://zacbook.net/2017/11/reverting-in-homebrew/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/reverting-in-homebrew/</guid>
+      <description>Occasionally, I like to grab the latest versions of various Homebrew packages. As I discovered today, the danger in doing this is breaking something that was working. It seems that after upgrading pandoc in Homebrew, it seems that it broke my Blogdown rendering process. Pandoc 2.0.1 was released on October 31, 2017. Unbeknownst to me, pandoc 2.0 made changes to the API that Blogdown has not yet incorporated. So today on November 2, I’m left with a broken blog rendering workflow.</description>
+    </item>
+    
+    <item>
+      <title>Blogdown and Hugo references</title>
+      <link>https://zacbook.net/2017/11/blogdown-and-hugo-references/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/blogdown-and-hugo-references/</guid>
+      <description>  This is a simple list of references for Blogdown and Hugo.
+ Hugo Documentation blogdown: Creating Websites with R Markdown by Yihui Xie, Amber Thomas, Alison Presmanes Hill Integrating Blogdown with GitHub Pages and Travis-CI by Jake Thompson. This is not how I currently deploy this blog, but am keeping it for potential future reference. It’s also a great example of the use of the Academic theme.  </description>
+    </item>
+    
+    <item>
+      <title>What the Git? (in Blogdown)</title>
+      <link>https://zacbook.net/2017/11/what-the-git-in-blogdown/</link>
+      <pubDate>Wed, 01 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/what-the-git-in-blogdown/</guid>
+      <description>This post no longer reflects my current practice. I’ve switched to deploying from a separate branch that contains the rendered html. As such, I now ignore the html files within /contentand no longer include generated content within /static.
+
+Being a fan of version control, and perhaps Git in particular, I naturally keep the source to my website in a Git repository. However, starting out with Blogdown and Hugo, I wasn’t sure what exactly should be stored in Git versus relying on the generated output of Blogdown or Hugo.</description>
+    </item>
+    
+    <item>
+      <title>Rmarkdown and Hugo short codes</title>
+      <link>https://zacbook.net/2017/10/rmarkdown-and-hugo-short-codes/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/10/rmarkdown-and-hugo-short-codes/</guid>
+      <description>  Note that in Rmarkdown files in blogdown, one must use the blogdown::shortcode function. The following example is given in the Blogdown documentation:
+blogdown::shortcode(&amp;#39;tweet&amp;#39;, &amp;#39;852205086956818432&amp;#39;) Anyone know of an R package for interfacing with Alexa Skills? @thosjleeper @xieyihui @drob @JennyBryan @HoloMarkeD ?
+&amp;mdash; Jeff Leek (@jtleek) April 12, 2017  </description>
+    </item>
+    
+    <item>
+      <title>Using Homebrew Python with Blogdown</title>
+      <link>https://zacbook.net/2017/10/using-homebrew-python-with-blogdown/</link>
+      <pubDate>Sat, 28 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/10/using-homebrew-python-with-blogdown/</guid>
+      <description>By default, Blogdown uses the system Python installation. To tell Blogdown to use a different version of Python, e.g., Python 3 installed via Homebrew, one needs to configure a different engine in Knitr:
+knitr::opts_chunk$set(engine.path = list(python = &amp;#39;/usr/local/bin/python3&amp;#39;)) I include this line in my ~/.Rprofile. Now you can test to ensure that it is using the specified version of Python:
+import sys print(sys.version) ## 3.9.5 (default, May 4 2021, 03:36:27) ## [Clang 12.</description>
+    </item>
+    
+    <item>
+      <title>Using Python&#39;s Matplotlib with Rmarkdown</title>
+      <link>https://zacbook.net/2017/10/using-python-s-matplotlib-with-rmarkdown/</link>
+      <pubDate>Sat, 28 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/10/using-python-s-matplotlib-with-rmarkdown/</guid>
+      <description>One way to include Matplotlib plots in Rmarkdown files within Blogdown is to save them to the /static directory. Files in this directory are then copied over to the /public directory for publishing.
+pwd mkdir -p ../../static/post/2017-10-28-using-python-s-matplotlib-with-rmarkdown_files # The p flag will create the directory (and intermediate subdirectories) if it doesn&amp;#39;t exist, otherwise will do nothing ## /Users/zac/git/zacbook.net/content/post knitr::current_input() # will return the name of the Rmd file ## [1] &amp;quot;2017-10-28-using-python-s-matplotlib-with-rmarkdown.</description>
+    </item>
+    
+  </channel>
+</rss>

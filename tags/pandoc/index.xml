@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pandoc on ZacBook.net</title>
+    <link>https://zacbook.net/tags/pandoc/</link>
+    <description>Recent content in pandoc on ZacBook.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Nov 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://zacbook.net/tags/pandoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reverting in Homebrew</title>
+      <link>https://zacbook.net/2017/11/reverting-in-homebrew/</link>
+      <pubDate>Thu, 02 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://zacbook.net/2017/11/reverting-in-homebrew/</guid>
+      <description>Occasionally, I like to grab the latest versions of various Homebrew packages. As I discovered today, the danger in doing this is breaking something that was working. It seems that after upgrading pandoc in Homebrew, it seems that it broke my Blogdown rendering process. Pandoc 2.0.1 was released on October 31, 2017. Unbeknownst to me, pandoc 2.0 made changes to the API that Blogdown has not yet incorporated. So today on November 2, I’m left with a broken blog rendering workflow.</description>
+    </item>
+    
+  </channel>
+</rss>
