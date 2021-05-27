@@ -1,7 +1,7 @@
 #!/bin/bash
 brew install python
-pip install numpy
-pip install matplotlib
+pip3 install numpy
+pip3 install matplotlib
 brew install pandoc
 brew install --cask r
 # Ignore local R profile since it uses yet-to-be installed libraries
