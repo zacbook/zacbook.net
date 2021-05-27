@@ -1,0 +1,17 @@
+---
+title: Resurrection
+author: Zac Harmany
+date: '2021-02-06'
+slug: index.en-us
+categories:
+  - metablogging
+tags: []
+keywords:
+  - tech
+---
+
+I'm back.
+
+<!--more-->
+
+Testing.
